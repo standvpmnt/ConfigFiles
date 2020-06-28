@@ -9,6 +9,10 @@ nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>t :!bundle exec rails test<cr>
 
 set number
+set relativenumber
+set incsearch
+set showcmd
+set wildmenu
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -24,6 +28,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
+Plugin 'sickill/vim-monokai'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
