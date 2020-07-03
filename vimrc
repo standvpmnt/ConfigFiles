@@ -10,9 +10,10 @@ nmap <leader>t :!bundle exec rails test<cr>
 
 set number
 set relativenumber
+set ruler
 set incsearch
-set showcmd
 set wildmenu
+set showcmd
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -30,6 +31,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'sickill/vim-monokai'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
