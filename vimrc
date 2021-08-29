@@ -1,5 +1,4 @@
 set nocompatible
-filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -9,12 +8,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
-Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'rakr/vim-one'
-
+Plugin 'rizzatti/dash.vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
+
+syntax enable
 filetype plugin indent on
 
 nmap 0 ^
@@ -29,14 +30,15 @@ nmap <leader>O O<esc>
 imap jk <esc>
 imap kj <esc>
 
-set number
-set relativenumber
 set ruler
+set number
 set incsearch
 set wildmenu
 set showcmd
 
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
+let g:rustfmt_autosave = 1
+
 colorscheme one
-set background=light
+set background=dark
