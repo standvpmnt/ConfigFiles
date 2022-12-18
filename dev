@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 rm -rf ~/.config/nvim
+rm -f ~/.tmux.conf
 ln -s $(pwd)/nvim ~/.config/nvim
+ln -s $(pwd)/tmux.conf ~/.tmux.conf
