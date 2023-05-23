@@ -1,5 +1,6 @@
 require("standvpmnt.remap")
 require("standvpmnt.set")
+require("standvpmnt.packer")
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
