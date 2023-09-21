@@ -31,8 +31,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 -- disable completion with tab
 -- this helps with copilot setup
--- cmp_mappings['<Tab>'] = nil
--- cmp_mappings['<S-Tab>'] = nil
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
