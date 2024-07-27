@@ -3,9 +3,9 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
+  -- 'tsserver',
   'eslint',
-  'rust_analyzer'
+  'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
@@ -19,6 +19,13 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+lsp.configure('gopls', {
+    setup = {
+        cmd = { 'gopls', 'serve', '-rpc.trace', '-v' },
+        filetypes = { 'go', 'gomod' },
+        -- root_dir = root_pattern('go.mod', '.git'),
+    }
+})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
