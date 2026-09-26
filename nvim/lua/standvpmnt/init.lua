@@ -25,7 +25,17 @@ autocmd('TextYankPost', {
 autocmd({"BufWritePre"}, {
     group = ThePrimeagenGroup,
     pattern = "*",
-    command = [[%s/\s\+$//e]],
+    callback = function(event)
+        if not vim.bo[event.buf].modifiable then
+            return
+        end
+
+        vim.api.nvim_buf_call(event.buf, function()
+            local view = vim.fn.winsaveview()
+            vim.cmd([[%s/\s\+$//e]])
+            vim.fn.winrestview(view)
+        end)
+    end,
 })
 
 vim.g.netrw_browse_split = 0
