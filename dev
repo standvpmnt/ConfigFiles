@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-rm -rf ~/.config/nvim
+rm -rf ~/.config/nvim ~/.config/ghostty
 rm -f ~/.tmux.conf
 ln -s $(pwd)/nvim ~/.config/nvim
+ln -s $(pwd)/ghostty ~/.config/ghostty
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
